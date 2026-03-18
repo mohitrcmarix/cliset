@@ -1,0 +1,513 @@
+/*
+Theme Name: CLI Theme
+Author: Your Name
+Version: 1.0
+Description: A simple theme created via CLI.
+Text Domain: clitheme
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* ------------------header design ------------------------- */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Container */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Logo */
+.site-branding .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f04e23;
+    text-decoration: none;
+}
+
+/* Navigation */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #f04e23;
+}
+
+/* Call to Action Buttons */
+.header-cta .btn {
+    margin-left: 15px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-quote {
+    background: #333;
+    color: #fff;
+}
+
+.btn-trial {
+    background: #f04e23;
+    color: #fff;
+}
+
+.header-cta .btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .header-cta {
+        margin-top: 15px;
+    }
+}
+
+/* ------------------ Main Content ------------------------- */
+.site-main {
+    padding: 40px 0;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Post Entries */
+.post-entry {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.entry-header .entry-title {
+    margin-bottom: 10px;
+}
+
+.entry-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.entry-title a:hover {
+    color: #f04e23;
+}
+
+.entry-meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.entry-meta span {
+    margin-right: 15px;
+}
+
+.entry-summary {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #f04e23;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.read-more:hover {
+    background: #d43d1a;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.pagination .page-numbers {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 4px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+}
+
+.pagination .page-numbers:hover,
+.pagination .page-numbers.current {
+    background: #f04e23;
+    color: #fff;
+    border-color: #f04e23;
+}
+
+/* Single Post/Page */
+.post-single,
+.page-single {
+    margin-bottom: 40px;
+}
+
+.post-single .entry-title,
+.page-single .entry-title {
+    margin-bottom: 20px;
+}
+
+.entry-content {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.entry-content p {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.site-footer {
+    background: #222;
+    color: #fff;
+    padding: 40px 0 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.footer-about h3,
+.footer-links h4,
+.footer-categories h4,
+.footer-newsletter h4 {
+    margin-bottom: 15px;
+    color: #f04e23;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-menu li a:hover {
+    color: #f04e23;
+}
+
+.footer-categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-categories li {
+    margin-bottom: 8px;
+}
+
+.footer-categories a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-categories a:hover {
+    color: #f04e23;
+}
+
+.footer-newsletter input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.footer-newsletter button {
+    width: 100%;
+    padding: 10px;
+    background: #f04e23;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+    background: #d43d1a;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+}
+
+/* Archive/Search Pages */
+.page-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.page-title {
+    color: #333;
+}
+
+/* 404 Page */
+.error-404 {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.error-404 .page-title {
+    margin-bottom: 20px;
+}
+
+.error-404-actions {
+    max-width: 600px;
+    margin: 40px auto 0;
+}
+
+.error-404-links h3 {
+    margin-bottom: 15px;
+    color: #f04e23;
+}
+
+.error-404-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.error-404-links li {
+    background: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+/* Comments */
+.comments-area {
+    margin-top: 40px;
+}
+
+.comments-title {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-list .comment {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.comment-author {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comment-meta {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.comment-content {
+    line-height: 1.6;
+}
+
+/* Comment Form */
+.comment-form {
+    margin-top: 40px;
+}
+
+.comment-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.comment-form textarea {
+    height: 120px;
+}
+
+.comment-form input[type="submit"] {
+    background: #f04e23;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 4px;
+}
+
+.comment-form input[type="submit"]:hover {
+    background: #d43d1a;
+}
+
+/* Search Form */
+.search-form {
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.search-field {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-submit {
+    padding: 10px 20px;
+    background: #f04e23;
+    color: #fff;
+    border: 1px solid #f04e23;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.search-submit:hover {
+    background: #d43d1a;
+}
+
+.header-cta {
+    margin-top: 15px;
+}
+
+
+/* ----------------------footer design---------------------------------------- */
+
+/* .site-footer {
+    background: #222;
+    color: #ddd;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-container h3,
+.footer-container h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-menu,
+.footer-categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li,
+.footer-categories li {
+    margin-bottom: 8px;
+}
+
+.footer-menu a,
+.footer-categories a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-menu a:hover,
+.footer-categories a:hover {
+    color: #f04e23;
+}
+
+.footer-newsletter input[type="email"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.footer-newsletter button {
+    padding: 8px 14px;
+    background: #f04e23;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 13px;
+} */
